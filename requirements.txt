@@ -1,0 +1,2 @@
+uwsgi
+git+git://github.com/keenlabs/canteen.git#egg=canteen
