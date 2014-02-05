@@ -4,4 +4,6 @@
 
 -extends "base.html"
 -block root
-  %b << Hello, homepage!
+
+  #homepage.person
+    =message|default("blab")
