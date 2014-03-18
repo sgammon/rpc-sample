@@ -18,4 +18,4 @@ class Homepage(Page):
 
     '''  '''
 
-    return self.render('home.haml')
+    return self.render('home.haml', message=self.hello.say_hello('hi!'))
