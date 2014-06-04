@@ -34,16 +34,7 @@ clean:
 	@find . -name "*.pyo" -delete
 
 build: .Python dependencies
-	@python setup.py build
-
-develop: build
-	@python setup.py develop
-
-package:
-	@python setup.py $(DISTRIBUTIONS)
-
-release: build test package
-	@python setup.py $(DISTRIBUTIONS) upload
+	@echo "Built RPC sample."
 
 dependencies:
 	# install pip dependencies
