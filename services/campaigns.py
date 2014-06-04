@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+
+'''
+
+  campaigns service
+
+'''
+
+# canteen
+from models import Campaigns
+from base import protect, rpc, remote
+
+
+@remote.public('campaigns')
+class CampaignsAPI(rpc.Service):
+
+  ''' i manage mock campaigns '''
+
+  @remote.public(Campaigns.Campaign, Campaigns)
+  def create(self, request):
+
+    ''' creates a campaign from a placement '''
+
+  @remote.public(Campaigns)
+  def list(self, request):
+
+    ''' lists campaigns previously created '''

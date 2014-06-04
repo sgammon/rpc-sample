@@ -21,11 +21,14 @@ import canteen, os, hashlib
 from canteen.util import config as cfg
 
 
-app = os.path.abspath(os.path.dirname(__file__))
-root = os.path.abspath(os.path.dirname(app))
+app, root = (
+  os.path.abspath(os.path.dirname(__file__)),
+  os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+)
+
 config = cfg.Config(app={
 
-  'name': 'canteen-sample',
+  'name': 'rpc-sample',
 
   # Main app settings
   'debug': __debug__,

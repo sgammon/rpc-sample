@@ -8,12 +8,12 @@
 from canteen import Logic, decorators
 
 
-@decorators.bind('hello')
-class GenerateHello(Logic):
+@decorators.bind('provider')
+class MockProvider(Logic):
 
   ''' injected logic class '''
 
-  def say_hello(self, message="Hello, world!"):
+  def resolve(self):
 
     ''' simply returns what it is given. '''
 
