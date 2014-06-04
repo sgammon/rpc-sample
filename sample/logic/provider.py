@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 '''
-  sample app logic
+
+  provider logic
+
 '''
 
 # canteen logic

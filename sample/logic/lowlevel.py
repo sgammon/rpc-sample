@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 '''
-  sample app logic
+
+  lowlevel logic
+
 '''
 
 # app base
@@ -11,10 +13,6 @@ from sample.base import model
 # canteen logic
 from canteen import Logic, bind
 from canteen.util.struct import BidirectionalEnum
-
-
-## Globals
-fixture_key = model.Key(models.Fixtures, 'state')
 
 
 class DNSRecordType(BidirectionalEnum):
@@ -36,7 +34,7 @@ class Fixtures(Logic):
 
     if __debug__:
       # grab state
-      fixture_state = models.Fixtures.get(fixture_key)
+      fixture_state = models.Fixtures.get(models.fixture_key)
 
       if not fixture_state or not fixture_state.done:
         models.fixtures()
