@@ -1,6 +1,6 @@
 
 #
-#    canteen RPC sample: makefile
+#   canteen RPC sample: makefile
 #
 #   :author: Sam Gammon <sam@keen.io>
 #   :copyright: (c) Sam Gammon, 2014
@@ -14,13 +14,13 @@
 DISTRIBUTIONS ?= bdist_egg sdist bdist_dumb
 
 ## Flags
-TEST_FLAGS ?= --verbose --with-coverage --cover-package=canteen --cover-package=canteen_tests
+TEST_FLAGS ?= --verbose --with-coverage --cover-package=canteen --cover-package=canteen_tests --cover-package=sample
 
 
 all: develop
 
 test: build
-	@nosetests $(TEST_FLAGS) canteen_tests
+	@nosetests $(TEST_FLAGS) sample_tests canteen_tests
 
 clean:
 	@echo "Cleaning buildspace..."

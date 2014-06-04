@@ -7,6 +7,9 @@
 # stdlib
 import pdb
 
+# sample app
+from sample import models
+
 # canteen
 from canteen import url, Page
 if __debug__: from canteen.model.adapter import inmemory
@@ -30,12 +33,12 @@ class Homepage(Page):
 
   def GET(self):
 
-    '''  '''
-
-    # make sure fixtures are installed
-    self.fixtures.install()
+    ''' handles HTTP GET '''
 
     # allow interactive breakpoints for inspection
     if __debug__ and self.request.args.get('debug'): pdb.set_trace()
+
+    # make sure fixtures are installed
+    self.fixtures.install()
 
     return self.render('home.haml', message='hi')

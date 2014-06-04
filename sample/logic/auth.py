@@ -10,8 +10,8 @@
 import hashlib
 
 # app
-import models
-from base import Auth
+from sample import models
+from sample.base import Auth
 
 # canteen
 from canteen import Logic, bind

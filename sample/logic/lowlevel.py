@@ -4,9 +4,11 @@
   sample app logic
 '''
 
+# app base
+from sample import models
+from sample.base import model
+
 # canteen logic
-import models
-from base import model
 from canteen import Logic, bind
 from canteen.util.struct import BidirectionalEnum
 
@@ -17,7 +19,7 @@ fixture_key = model.Key(models.Fixtures, 'state')
 
 class DNSRecordType(BidirectionalEnum):
 
-  '''  '''
+  ''' i specify different DNS types in a discrete manner '''
 
   A = 0x0
   AAAA = 0x1

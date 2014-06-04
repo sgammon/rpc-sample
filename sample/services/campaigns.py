@@ -7,8 +7,8 @@
 '''
 
 # canteen
-from models import Campaigns
-from base import protect, rpc, remote
+from sample.models import Campaigns
+from sample.base import protect, rpc, remote
 
 
 @remote.public('campaigns')
