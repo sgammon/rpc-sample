@@ -8,4 +8,4 @@ uwsgi
 gevent
 git+ssh://git@github.com/sgammon/protobuf.git#egg=protobuf
 git+ssh://git@github.com/sgammon/hamlish-jinja.git#egg=hamlish_jinja
-git+git://github.com/sgammon/canteen.git#egg=canteen
+git+ssh://github.com/sgammon/canteen.git#egg=canteen

@@ -36,6 +36,8 @@ clean:
 build: .Python dependencies
 	@echo "Built RPC sample."
 
+develop: build test
+
 dependencies:
 	# install pip dependencies
 	@bin/pip install colorlog
