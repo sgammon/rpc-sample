@@ -20,7 +20,7 @@ TEST_FLAGS ?= --verbose --with-coverage --cover-package=canteen --cover-package=
 all: develop
 
 test: build
-	@nosetests $(TEST_FLAGS) sample_tests canteen_tests
+	@bin/nosetests $(TEST_FLAGS) sample_tests canteen_tests
 
 clean:
 	@echo "Cleaning buildspace..."
